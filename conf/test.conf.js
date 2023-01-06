@@ -5,7 +5,12 @@ const parallelConfig = {
   commonCapabilities: {
     'bstack:options': {
       buildName: 'browserstack-build-1',
-      source: 'webdriverio:sample-master:v1.1'
+      source: 'webdriverio:sample-master:v1.1',
+      debug: true,
+      networkLogs: true,
+      localIdentifier: "TEAM3",
+      "geoLocation": "CN",
+      "timezone": "New_York",
     }
   },
   capabilities: [
@@ -31,6 +36,22 @@ const parallelConfig = {
         deviceName: 'Samsung Galaxy S20',
       },
     },
+    {
+      browserName: 'android',
+      'bstack:options': {
+        deviceOrientation: 'portrait',
+        deviceName: 'Samsung Galaxy S22 Ultra',
+        osVersion: '12.0'
+      }
+    },
+    {
+      browserName: 'ios',
+      'bstack:options': {
+        deviceOrientation: 'portrait',
+        deviceName: 'iPhone 14 Pro Max',
+        osVersion: '16'
+      }
+    }
   ],
 };
 
